@@ -1,0 +1,27 @@
+{
+  "name": "getirchallenge",
+  "version": "1.0.0",
+  "description": "Demo App For Getir",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UgurGumushan/GetirChallnge.git"
+  },
+  "keywords": [
+    "Getir",
+    "Challenge"
+  ],
+  "author": "Uğur Gümüşhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UgurGumushan/GetirChallnge/issues"
+  },
+  "homepage": "https://github.com/UgurGumushan/GetirChallnge#readme"
+}
