@@ -1,8 +1,9 @@
+// The model handles the db intensive operations
+
 const { MongoClient } = require("mongodb");
 const _ = require("lodash");
-//the username and password are going to be retrieved from secure storage or environment variables
+//the username and password are going to be retrieved from secure storage or environment variables in a real use case scenario
 const mongoURL = "mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-xzwqd.mongodb.net/getir-case-study?retryWrites=true";
-
 
 class challengeModel {
     constructor() { }

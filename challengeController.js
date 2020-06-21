@@ -1,3 +1,4 @@
+//The controller handles input validation and presenting the data in the format that is defined in the requirements. 
 const challengeModel = require("./challengeModel.js");
 const _ = require("lodash");
 
