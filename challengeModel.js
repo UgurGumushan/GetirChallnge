@@ -33,7 +33,6 @@ class challengeModel {
                     reject(err);
                 }
                 const db = client.db("getir-case-study");
-                var findCursor = db.collection("records").find({});
                 const cursor = db.collection("records").aggregate(aggregationPipeline);
                 cursor.toArray(function (err, records) {
                     client.close();
