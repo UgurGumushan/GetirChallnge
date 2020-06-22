@@ -6,10 +6,15 @@ const _ = require("lodash");
 const mongoURL = "mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-xzwqd.mongodb.net/getir-case-study?retryWrites=true";
 
 class challengeModel {
-    constructor() { }
     async getRecords({ startDate, endDate, minCount, maxCount }) {
         const client = new MongoClient(mongoURL);
+        // filtering by date first, so that the number of calculations is reduced in the next steps
         const aggregationPipeline = [
+            {
+                $match: {
+                    createdAt: { "$gte": startDate, "$lte": endDate }
+                }
+            },
             {
                 $project: {
                     _id: false,
@@ -20,8 +25,7 @@ class challengeModel {
             },
             {
                 $match: {
-                    totalCount: { "$gte": minCount, "$lte": maxCount },
-                    createdAt: { "$gte": startDate, "$lte": endDate }
+                    totalCount: { "$gte": minCount, "$lte": maxCount }
                 }
             }
         ];
